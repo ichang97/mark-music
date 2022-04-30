@@ -34,7 +34,7 @@ class TrackController extends Controller
 
             $devices = collect($devices_array);
 
-            if($response->getStatusCode() == 200 && $result['devices']){
+            if($response->getStatusCode() == 200){
                 return view('devices', compact('devices'));
             }
         }

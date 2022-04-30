@@ -44,6 +44,8 @@
     $(document).on('click', '[data-action="get-device"]', function(){
             let uri = $(this).data('uri')
 
+            $('#devices-result').empty()
+
             $.ajax({
                 type: 'POST',
                 url: '{{ route("player.devices") }}',
